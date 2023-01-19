@@ -271,7 +271,7 @@ const _sfc_main$c = {
 };
 var RoleSelectionCard = /* @__PURE__ */ _export_sfc(_sfc_main$c, [["__scopeId", "data-v-c15359ac"]]);
 var RoleSelection_vue_vue_type_style_index_0_scoped_true_lang = "";
-const _withScopeId$6 = (n) => (pushScopeId("data-v-4b0bd811"), n = n(), popScopeId(), n);
+const _withScopeId$6 = (n) => (pushScopeId("data-v-736a7854"), n = n(), popScopeId(), n);
 const _hoisted_1$9 = { id: "playerName" };
 const _hoisted_2$6 = /* @__PURE__ */ _withScopeId$6(() => /* @__PURE__ */ createBaseVNode("h2", null, "Choose your role:", -1));
 const _hoisted_3$5 = { class: "flexContainer" };
@@ -312,16 +312,15 @@ const _sfc_main$b = {
             }, null, 8, ["role", "class"]),
             createVNode(RoleSelectionCard, {
               role: unref(Role).Enemy,
-              class: normalizeClass({ selected: unref(props).roleState.enemy.selected }),
-              onClick: _cache[5] || (_cache[5] = ($event) => _ctx.$emit("handle_select_role", unref(Role).Enemy))
-            }, null, 8, ["role", "class"])
+              class: normalizeClass({ selected: true })
+            }, null, 8, ["role"])
           ])
         ])
       ], 64);
     };
   }
 };
-var RoleSelection = /* @__PURE__ */ _export_sfc(_sfc_main$b, [["__scopeId", "data-v-4b0bd811"]]);
+var RoleSelection = /* @__PURE__ */ _export_sfc(_sfc_main$b, [["__scopeId", "data-v-736a7854"]]);
 var ColorBorder_vue_vue_type_style_index_0_scoped_true_lang = "";
 const _sfc_main$a = {
   props: {
@@ -385,7 +384,7 @@ const _sfc_main$9 = {
 };
 var TriggerSelectionCard = /* @__PURE__ */ _export_sfc(_sfc_main$9, [["__scopeId", "data-v-0c62a624"]]);
 var TriggerSelection_vue_vue_type_style_index_0_scoped_true_lang = "";
-const _withScopeId$5 = (n) => (pushScopeId("data-v-38795591"), n = n(), popScopeId(), n);
+const _withScopeId$5 = (n) => (pushScopeId("data-v-9e3dd6fe"), n = n(), popScopeId(), n);
 const _hoisted_1$7 = /* @__PURE__ */ _withScopeId$5(() => /* @__PURE__ */ createBaseVNode("h2", null, "Choose your playstyle", -1));
 const _hoisted_2$4 = { id: "triggerSelectionGrid" };
 const _sfc_main$8 = {
@@ -401,35 +400,6 @@ const _sfc_main$8 = {
     let handle_btn_back = () => {
       emit("release_role");
       emit("navigate_to", ScreenType.RoleSelection);
-    };
-    let getMobileOperatingSystem = () => {
-      var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-      if (/windows phone/i.test(userAgent)) {
-        return "Windows Phone";
-      }
-      if (/android/i.test(userAgent)) {
-        return "Android";
-      }
-      if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-        return "iOS";
-      }
-      return "unknown";
-    };
-    let registerShakeListeners = () => {
-      console.log(getMobileOperatingSystem());
-      if (getMobileOperatingSystem() == "iOS") {
-        DeviceMotionEvent.requestPermission().then((response) => {
-          if (response == "granted") {
-            emit("handle_trigger_selection", TriggerOption.Shake);
-          }
-        });
-      } else if (getMobileOperatingSystem() == "Android") {
-        if (window.DeviceMotionEvent != void 0) {
-          emit("handle_trigger_selection", TriggerOption.Shake);
-        }
-      } else {
-        alert("Please use a mobile device :)");
-      }
     };
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock(Fragment, null, [
@@ -447,22 +417,22 @@ const _sfc_main$8 = {
         createBaseVNode("div", _hoisted_2$4, [
           createVNode(TriggerSelectionCard, {
             triggerOption: unref(TriggerOption).Shake,
-            onClick: unref(registerShakeListeners)
-          }, null, 8, ["triggerOption", "onClick"]),
+            class: "disabled"
+          }, null, 8, ["triggerOption"]),
           createVNode(TriggerSelectionCard, {
             triggerOption: unref(TriggerOption).Touch,
             onClick: _cache[1] || (_cache[1] = ($event) => _ctx.$emit("handle_trigger_selection", unref(TriggerOption).Touch))
           }, null, 8, ["triggerOption"]),
           createVNode(TriggerSelectionCard, {
             triggerOption: unref(TriggerOption).Voice,
-            onClick: _cache[2] || (_cache[2] = ($event) => _ctx.$emit("handle_trigger_selection", unref(TriggerOption).Voice))
+            class: "disabled"
           }, null, 8, ["triggerOption"])
         ])
       ], 64);
     };
   }
 };
-var TriggerSelection = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["__scopeId", "data-v-38795591"]]);
+var TriggerSelection = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["__scopeId", "data-v-9e3dd6fe"]]);
 var _imports_0$3 = "./assets/ready.b6485a90.svg";
 var _imports_1$2 = "./assets/unready.8176aec6.svg";
 var ControlElement_vue_vue_type_style_index_0_scoped_true_lang = "";

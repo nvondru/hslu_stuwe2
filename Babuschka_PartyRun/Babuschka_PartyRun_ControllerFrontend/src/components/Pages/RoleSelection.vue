@@ -24,11 +24,7 @@
         :class="{ selected: props.roleState.shotRelease.selected }"
         @click="$emit('handle_select_role', Role.ShotRelease)"
       />
-      <RoleSelectionCard
-        :role="Role.Enemy"
-        :class="{ selected: props.roleState.enemy.selected }"
-        @click="$emit('handle_select_role', Role.Enemy)"
-      />
+      <RoleSelectionCard :role="Role.Enemy" :class="{ selected: true }" />
     </div>
   </div>
 </template>

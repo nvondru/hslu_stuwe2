@@ -11,7 +11,7 @@
   <div id="triggerSelectionGrid">
     <TriggerSelectionCard
       :triggerOption="TriggerOption.Shake"
-      @click="registerShakeListeners"
+      class="disabled"
     />
     <TriggerSelectionCard
       :triggerOption="TriggerOption.Touch"
@@ -19,7 +19,7 @@
     />
     <TriggerSelectionCard
       :triggerOption="TriggerOption.Voice"
-      @click="$emit('handle_trigger_selection', TriggerOption.Voice)"
+      class="disabled"
     />
   </div>
 </template>
@@ -112,5 +112,9 @@ h2 {
   gap: 20px;
   justify-content: center;
   align-items: center;
+}
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
 }
 </style>

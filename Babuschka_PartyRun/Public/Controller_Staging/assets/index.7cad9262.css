@@ -126,13 +126,13 @@ hr[data-v-c15359ac] {
   box-sizing: border-box;
 }
 
-#playerName[data-v-4b0bd811] {
+#playerName[data-v-736a7854] {
   text-align: center;
 }
-h2[data-v-4b0bd811] {
+h2[data-v-736a7854] {
   text-align: center;
 }
-#selectionGrid[data-v-4b0bd811] {
+#selectionGrid[data-v-736a7854] {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -140,11 +140,11 @@ h2[data-v-4b0bd811] {
   /* padding: 0px 2rem; */
   box-sizing: border-box;
 }
-.selected[data-v-4b0bd811] {
+.selected[data-v-736a7854] {
   opacity: 0.5;
   pointer-events: none;
 }
-.flexContainer[data-v-4b0bd811] {
+.flexContainer[data-v-736a7854] {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -188,11 +188,11 @@ h2[data-v-4b0bd811] {
   background-image: url("./voice.a13af358.svg");
 }
 
-h1[data-v-38795591],
-h2[data-v-38795591] {
+h1[data-v-9e3dd6fe],
+h2[data-v-9e3dd6fe] {
   text-align: center;
 }
-#triggerSelectionGrid[data-v-38795591] {
+#triggerSelectionGrid[data-v-9e3dd6fe] {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -200,6 +200,10 @@ h2[data-v-38795591] {
   gap: 20px;
   justify-content: center;
   align-items: center;
+}
+.disabled[data-v-9e3dd6fe] {
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 #controlElement[data-v-465e4648] {
